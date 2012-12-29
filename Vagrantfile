@@ -68,8 +68,6 @@ Vagrant::Config.run do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "apt"
-    chef.add_recipe "graphite"
     chef.run_list = [
       "recipe[apt]",
       "recipe[graphite]",
